@@ -92,8 +92,8 @@ body {
 
 .gs-logo {
     display: block;
-    width: 105px;
-    height: 105px;
+    width: 115px;
+    height: 115px;
     object-fit: contain;
 }
 
@@ -102,7 +102,7 @@ body {
 
 .gerian-soiree-name {
     position: absolute;
-    top: 132px;
+    top: 142px;
     left: 3.5%;
     z-index: 10;
 
@@ -204,7 +204,7 @@ body {
     margin-bottom: 5px;
 
     font-family: 'Great Vibes', cursive;
-    font-size: 88px;
+    font-size: 98px;
     font-weight: 400;
     line-height: 0.95;
 
