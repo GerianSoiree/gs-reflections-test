@@ -247,7 +247,7 @@ body {
 
     color: #ffffff;
    text-shadow:
-    0px 0px 35px rgba(0, 0, 0, 1),
+    0px 0px 35px rgba(255, 0, 0, 1),
     0px 0px 50px rgba(0, 0, 0, 1),
     0px 0px 65px rgba(0, 0, 0, 0.90);
 }
