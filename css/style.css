@@ -224,7 +224,7 @@ body {
     line-height: 1.05;
 
     color: #ffffff;
-    -webkit-text-stroke: 5px #000000;
+    text-shadow: 5px 5px 3px black;
 }
 
 
