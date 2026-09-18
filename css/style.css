@@ -150,8 +150,9 @@ body {
     transition: color 0.25s ease;
 }
 
-.reflection-navigation a:hover {
-    color: #e5b544;
+.reflection-navigation .nav-previous:hover,
+.reflection-navigation .nav-next:hover {
+    color: #ffffff;
 }
 
 
