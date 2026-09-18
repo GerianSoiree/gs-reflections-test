@@ -273,7 +273,7 @@ body {
     text-align: center;
 
     color: #ffffff;
-    text-shadow: 0px 2px 12px rgba(0, 0, 0, 0.99);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.95);
 }
 
 .hero-quote::after {
