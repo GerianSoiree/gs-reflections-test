@@ -201,8 +201,29 @@ body {
     z-index: 5;
 
     width: 48%;
+
+    isolation: isolate;
 }
 
+.reflection-hero-content::before {
+    content: "";
+    position: absolute;
+
+    left: -8%;
+    top: 20%;
+    width: 116%;
+    height: 85%;
+
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.38) 45%,
+        rgba(0, 0, 0, 0) 78%
+    );
+
+    z-index: -1;
+    pointer-events: none;
+}
 
 /* Reflection number */
 
