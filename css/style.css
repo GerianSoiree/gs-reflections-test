@@ -1,7 +1,7 @@
 /* =========================================
-  Gerian Soirée
-  Master Website Stylesheet
-  Reflection 1
+   Gerian Soirée
+   Master Website Stylesheet
+   Reflection 1
 ========================================= */
 
 
@@ -32,7 +32,7 @@ body {
 
 
 /* =========================================
-  REFLECTION HERO
+   REFLECTION HERO
 ========================================= */
 
 .reflection-hero {
@@ -61,7 +61,7 @@ body {
 
 
 /* =========================================
-  GS LOGO
+   GS LOGO
 ========================================= */
 
 .gs-logo-link {
@@ -106,7 +106,7 @@ body {
 
 
 /* =========================================
-  NAVIGATION
+   NAVIGATION
 ========================================= */
 
 .reflection-navigation {
@@ -134,6 +134,7 @@ body {
 
     color: #e5b544;
 
+    /* DARKER NAVIGATION SHADOW */
     text-shadow:
         0px 2px 3px rgba(0, 0, 0, 1),
         0px 0px 8px rgba(0, 0, 0, 1),
@@ -185,7 +186,7 @@ body {
 
 
 /* =========================================
-  HERO TEXT
+   HERO TEXT
 ========================================= */
 
 .reflection-hero-content {
@@ -210,35 +211,17 @@ body {
     font-weight: 400;
     line-height: 0.95;
 
-    /* METALLIC GOLD */
-    background: linear-gradient(
-        180deg,
-        #fff4b0 0%,
-        #ffd75a 18%,
-        #e5a91f 42%,
-        #fff0a0 58%,
-        #d48b08 78%,
-        #ffd95c 100%
-    );
+    color: #e5b544;
 
-    -webkit-background-clip: text;
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-
-    /* GOLD GLOW / DEFINITION */
     text-shadow:
         0px 3px 4px rgba(0, 0, 0, 1),
-        0px 0px 10px rgba(0, 0, 0, 1),
-        0px 0px 20px rgba(0, 0, 0, 0.95),
-        0px 0px 32px rgba(255, 196, 45, 0.55);
+        0px 0px 12px rgba(0, 0, 0, 0.95),
+        0px 0px 25px rgba(0, 0, 0, 0.85),
+        0px 0px 40px rgba(0, 0, 0, 0.65);
 }
 
 
-/* =========================================
-  MAIN TITLE
-========================================= */
+/* ---------- MAIN TITLE ---------- */
 
 .reflection-hero-content h1 {
     margin: 0;
@@ -271,17 +254,11 @@ body {
     line-height: 1.2;
 
     color: #ffffff;
-
-    text-shadow:
-        0px 2px 3px rgba(0, 0, 0, 1),
-        0px 0px 8px rgba(0, 0, 0, 1),
-        0px 0px 16px rgba(0, 0, 0, 0.95),
-        0px 0px 28px rgba(0, 0, 0, 0.85);
 }
 
 
 /* =========================================
-  HERO QUOTE
+   HERO QUOTE
 ========================================= */
 
 .hero-quote {
@@ -304,10 +281,9 @@ body {
     color: #ffffff;
 
     text-shadow:
-        0px 2px 3px rgba(0, 0, 0, 1),
-        0px 0px 8px rgba(0, 0, 0, 1),
-        0px 0px 16px rgba(0, 0, 0, 0.95),
-        0px 0px 28px rgba(0, 0, 0, 0.85);
+        0px 2px 4px rgba(0, 0, 0, 1),
+        0px 0px 12px rgba(0, 0, 0, 0.95),
+        0px 0px 25px rgba(0, 0, 0, 0.85);
 }
 
 .hero-quote::after {
@@ -324,7 +300,7 @@ body {
 
 
 /* =========================================
-  LOWER CONTENT
+   LOWER CONTENT
 ========================================= */
 
 .reflection-content {
@@ -344,7 +320,7 @@ body {
 
 
 /* =========================================
-  SECTION HEADINGS
+   SECTION HEADINGS
 ========================================= */
 
 .reflection-story h2,
@@ -373,7 +349,7 @@ body {
 
 
 /* =========================================
-  REFLECTION STORY
+   REFLECTION STORY
 ========================================= */
 
 .reflection-story {
@@ -393,7 +369,7 @@ body {
 
 
 /* =========================================
-  LISTEN AREA
+   LISTEN AREA
 ========================================= */
 
 .reflection-listen {
@@ -465,7 +441,7 @@ body {
 
 
 /* =========================================
-  AUDIO PLAYER
+   AUDIO PLAYER
 ========================================= */
 
 .music-player {
@@ -498,7 +474,7 @@ body {
 
 
 /* =========================================
-  BOTTOM REFLECTION / TAGLINE
+   BOTTOM REFLECTION / TAGLINE
 ========================================= */
 
 .bottom-reflection {
@@ -534,7 +510,7 @@ body {
 
 
 /* =========================================
-  BASIC RESPONSIVE PROTECTION
+   BASIC RESPONSIVE PROTECTION
 ========================================= */
 
 @media (max-width: 1100px) {
