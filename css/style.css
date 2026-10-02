@@ -1,7 +1,7 @@
 /* =========================================
    Gerian Soirée
    Master Website Stylesheet
-   Reflection 1 - First Layout
+   Reflection 1
 ========================================= */
 
 
@@ -60,22 +60,6 @@ body {
 }
 
 
-/* ---------- DARK OVERLAY ---------- */
-/*
-   Kept transparent so the hero photograph
-   remains bright and natural.
-*/
-
-.reflection-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: transparent;
-    z-index: 2;
-    pointer-events: none;
-}
-
-
 /* =========================================
    GS LOGO
 ========================================= */
@@ -112,13 +96,12 @@ body {
 
     color: #dcae3d;
 
-    -webkit-text-stroke: 0.3px #ffffff;
-
     text-shadow:
-        0px 3px 4px rgba(0, 0, 0, 1),
-        0px 0px 12px rgba(0, 0, 0, 0.95),
-        0px 0px 25px rgba(0, 0, 0, 0.85),
-        0px 0px 40px rgba(0, 0, 0, 0.65);
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 20px rgba(0, 0, 0, 0.85);
+
+    -webkit-text-stroke: 0.3px #ffffff;
 }
 
 
@@ -151,11 +134,12 @@ body {
 
     color: #e5b544;
 
+    /* DARKER NAVIGATION SHADOW */
     text-shadow:
-        0px 3px 4px rgba(0, 0, 0, 1),
-        0px 0px 12px rgba(0, 0, 0, 0.95),
-        0px 0px 25px rgba(0, 0, 0, 0.85),
-        0px 0px 40px rgba(0, 0, 0, 0.65);
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 8px rgba(0, 0, 0, 1),
+        0px 0px 16px rgba(0, 0, 0, 0.95),
+        0px 0px 28px rgba(0, 0, 0, 0.85);
 
     transition: color 0.25s ease;
 }
@@ -217,29 +201,6 @@ body {
 }
 
 
-/* ---------- REFLECTION NUMBER BACKGROUND GLOW ---------- */
-
-.reflection-hero-content::before {
-    content: "";
-    position: absolute;
-
-    left: -8%;
-    top: 0%;
-    width: 120%;
-    height: 110%;
-
-    background: radial-gradient(
-        ellipse at center,
-        rgba(0, 0, 0, 0.45) 0%,
-        rgba(0, 0, 0, 0.22) 50%,
-        rgba(0, 0, 0, 0) 100%
-    );
-
-    z-index: -1;
-    pointer-events: none;
-}
-
-
 /* ---------- REFLECTION NUMBER ---------- */
 
 .reflection-number {
@@ -274,7 +235,10 @@ body {
     color: #ffffff;
 
     text-shadow:
-        0px 2px 5px rgba(0, 0, 0, 0.75);
+        0px 3px 4px rgba(0, 0, 0, 1),
+        0px 0px 12px rgba(0, 0, 0, 0.95),
+        0px 0px 25px rgba(0, 0, 0, 0.85),
+        0px 0px 40px rgba(0, 0, 0, 0.65);
 }
 
 
@@ -317,7 +281,9 @@ body {
     color: #ffffff;
 
     text-shadow:
-        0px 2px 5px rgba(0, 0, 0, 0.95);
+        0px 2px 4px rgba(0, 0, 0, 1),
+        0px 0px 12px rgba(0, 0, 0, 0.95),
+        0px 0px 25px rgba(0, 0, 0, 0.85);
 }
 
 .hero-quote::after {
