@@ -3,102 +3,337 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GS Reflections</title>
+    <title>Gerian Soirée | Reflections</title>
+
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
 
-        body {
-            margin: 0;
-            font-family: Georgia, serif;
-            background-color: #1a1a1a;
-            color: #f5f1e8;
-            text-align: center;
+        /* =========================================
+           GS REFLECTIONS
+           LANDING PAGE
+           ========================================= */
+
+        .landing-page {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0.62) 0%,
+                    rgba(0, 0, 0, 0.38) 45%,
+                    rgba(0, 0, 0, 0.08) 100%
+                ),
+                url("images/Landing-Hero.jpg");
+
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            color: #ffffff;
         }
 
-        .hero {
+
+        /* ---------- LANDING CONTENT ---------- */
+
+        .landing-content {
+            position: relative;
+            z-index: 2;
+
             min-height: 100vh;
+
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
+
+            padding: 80px 7%;
         }
 
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
+
+        /* ---------- GS LOGO ---------- */
+
+        .landing-logo-link {
+            position: absolute;
+            top: 0;
+            left: 6%;
+
+            z-index: 10;
+
+            display: block;
         }
 
-        .subtitle {
-            font-size: 1.4rem;
+        .landing-logo {
+            display: block;
+
+            width: 125px;
+            height: 125px;
+
+            object-fit: contain;
+        }
+
+
+        /* ---------- GERIAN SOIRÉE ---------- */
+
+        .landing-name {
+            margin: 95px 0 8px;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: #dcae3d;
+
+            text-shadow:
+                0px 2px 3px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 0.95),
+                0px 0px 20px rgba(0, 0, 0, 0.85);
+
+            -webkit-text-stroke: 0.3px #ffffff;
+        }
+
+
+        /* ---------- MAIN TITLE ---------- */
+
+        .landing-title {
+            margin: 0;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 60px;
+            font-weight: 700;
             font-style: italic;
+            line-height: 1.05;
+
+            color: #ffffff;
+
+            text-shadow:
+                0px 3px 4px rgba(0, 0, 0, 1),
+                0px 0px 12px rgba(0, 0, 0, 0.95),
+                0px 0px 25px rgba(0, 0, 0, 0.85);
+        }
+
+
+        /* ---------- SUBTITLE ---------- */
+
+        .landing-subtitle {
+            margin: 18px 0 0;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 27px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.2;
+
+            color: #ffffff;
+
+            text-shadow:
+                0px 2px 3px rgba(0, 0, 0, 1),
+                0px 0px 8px rgba(0, 0, 0, 1),
+                0px 0px 16px rgba(0, 0, 0, 0.95);
+        }
+
+
+        /* ---------- GOLD DIVIDER ---------- */
+
+        .landing-line {
+            width: 55px;
+            height: 2px;
+
+            margin: 22px 0 20px;
+
+            background: #e5b544;
+        }
+
+
+        /* ---------- INTRODUCTION ---------- */
+
+        .landing-intro {
             max-width: 650px;
-            line-height: 1.6;
-            margin-bottom: 40px;
+
+            margin: 0 0 30px;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.55;
+
+            color: #ffffff;
+
+            text-shadow:
+                0px 2px 3px rgba(0, 0, 0, 1),
+                0px 0px 10px rgba(0, 0, 0, 0.95);
         }
 
-        .intro {
-            max-width: 700px;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
 
-        .enter-button {
-            display: inline-block;
-            padding: 15px 30px;
-            border: 1px solid #f5f1e8;
-            color: #f5f1e8;
+        /* ---------- BEGIN THE JOURNEY ---------- */
+
+        .landing-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 320px;
+            max-width: 100%;
+
+            padding: 15px 22px;
+
+            border: 1px solid #e5b544;
+
+            background: rgba(0, 0, 0, 0.25);
+
+            color: #e5b544;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 18px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             text-decoration: none;
-            font-size: 1rem;
-            transition: 0.3s;
+
+            transition:
+                color 0.25s ease,
+                background 0.25s ease;
         }
 
-        .enter-button:hover {
-            background-color: #f5f1e8;
-            color: #1a1a1a;
+        .landing-button:hover {
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.55);
         }
 
-        footer {
-            padding: 20px;
-            font-size: 0.8rem;
-            opacity: 0.6;
+        .landing-button .nav-arrow {
+            font-size: 30px;
+            line-height: 0;
+        }
+
+
+        /* ---------- CLOSING QUOTE ---------- */
+
+        .landing-quote {
+            position: absolute;
+
+            right: 4%;
+            top: 68%;
+
+            transform: translateY(-50%);
+
+            z-index: 5;
+
+            width: 18%;
+
+            font-family: 'Lora', Georgia, serif;
+            font-size: 29px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.35;
+            text-align: center;
+
+            color: #ffffff;
+
+            text-shadow:
+                0px 2px 3px rgba(0, 0, 0, 1),
+                0px 0px 8px rgba(0, 0, 0, 1),
+                0px 0px 16px rgba(0, 0, 0, 0.95);
+        }
+
+        .landing-quote::after {
+            content: "";
+
+            display: block;
+
+            width: 55px;
+            height: 2px;
+
+            margin: 22px auto 0;
+
+            background: #e5b544;
+        }
+
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 1100px) {
+
+            .landing-title {
+                font-size: 45px;
+            }
+
+            .landing-subtitle {
+                font-size: 21px;
+            }
+
+            .landing-intro {
+                font-size: 18px;
+            }
+
+            .landing-quote {
+                font-size: 23px;
+            }
         }
 
     </style>
 
 </head>
 
+
 <body>
 
-    <section class="hero">
+    <main class="landing-page">
 
-        <h1>GS Reflections</h1>
-
-        <p class="subtitle">
-            Music. Reflection. Creativity. Discovery.
-        </p>
-
-        <p class="intro">
-            This is a journey through ten reflections, ten pieces of music,
-            and the thoughts, questions and experiences that shaped them.
-            Each reflection is an invitation to pause, listen and discover
-            something along the way.
-        </p>
-
-        <a href="fullcollection.html" class="enter-button">
-            Begin the Journey
+        <!-- GS LOGO -->
+        <a href="index.html" class="landing-logo-link">
+            <img
+                src="images/gslogo.png"
+                alt="Gerian Soirée GS Logo"
+                class="landing-logo"
+            >
         </a>
 
-    </section>
 
-    <footer>
-        © Gerian Soirée
-    </footer>
+        <!-- MAIN LANDING CONTENT -->
+        <section class="landing-content">
+
+            <div class="landing-name">
+                GERIAN SOIRÉE
+            </div>
+
+            <h1 class="landing-title">
+                Reflections
+            </h1>
+
+            <p class="landing-subtitle">
+                Music. Reflection. Creativity. Discovery.
+            </p>
+
+            <div class="landing-line"></div>
+
+            <p class="landing-intro">
+                This is a journey through ten reflections, ten pieces of music,
+                and the thoughts, questions and experiences that shaped them.
+                Each reflection is an invitation to pause, listen and discover
+                something along the way.
+            </p>
+
+            <a href="reflection-1.html" class="landing-button">
+                <span>Begin the Journey</span>
+                <span class="nav-arrow">→</span>
+            </a>
+
+        </section>
+
+
+        <!-- CLOSING QUOTE -->
+        <div class="landing-quote">
+            Some journeys<br>
+            begin with a question.
+        </div>
+
+    </main>
 
 </body>
 
