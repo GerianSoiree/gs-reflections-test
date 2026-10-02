@@ -216,8 +216,8 @@ body {
 
     background: radial-gradient(
         ellipse at center,
-        rgba(0, 0, 0, 0.65) 0%,
-        rgba(0, 0, 0, 0.38) 50%,
+        rgba(0, 0, 0, 0.45) 0%,
+        rgba(0, 0, 0, 0.22) 50%,
         rgba(0, 0, 0, 0) 100%
     );
 
