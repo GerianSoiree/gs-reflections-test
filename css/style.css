@@ -206,18 +206,30 @@ body {
 .reflection-number {
     margin-bottom: 5px;
 
-    font-family: 'Great Vibes', cursive;
-    font-size: 103px;
+    font-family: 'Alex Brush', 'Great Vibes', cursive;
+    font-size: 98px;
     font-weight: 400;
     line-height: 0.95;
 
-    color: #e5b544;
+       background: linear-gradient(
+       to bottom,
+       #fff8d6 0%,
+       #ffe9a0 12%,
+       #f7c94d 28%,
+       #d99b22 48%,
+       #fff0a8 58%,
+       #e0a52d 72%,
+       #a96b12 100%
+   );
 
-    text-shadow:
-        0px 3px 4px rgba(0, 0, 0, 1),
-        0px 0px 12px rgba(0, 0, 0, 0.95),
-        0px 0px 25px rgba(0, 0, 0, 0.85),
-        0px 0px 40px rgba(0, 0, 0, 0.65);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+
+   filter:
+       drop-shadow(0px 2px 1px rgba(72, 39, 4, 0.95))
+       drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.9))
+       drop-shadow(0px 0px 9px rgba(218, 158, 39, 0.45));
 }
 
 
