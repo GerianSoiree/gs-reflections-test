@@ -1,468 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gerian Soirée | Reflections</title>
+    <title>Reflection 3 | 30 Years of Silence | Gerian Soirée</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-
-    /* =========================================================
-       GS REFLECTIONS
-       LANDING PAGE
-       ========================================================= */
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      min-height: 100%;
-    }
-
-    body {
-      font-family: 'Lora', Georgia, serif;
-      background: #000;
-    }
-
-    .landing-page {
-      position: relative;
-      min-height: 100vh;
-      width: 100%;
-      overflow: hidden;
-
-      background-image: url("images/Landing-Hero.jpg");
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-
-      color: #fff;
-    }
-
-
-    /* =========================================================
-       DARK OVERLAY
-       ========================================================= */
-
-    .landing-page::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-
-      background:
-        linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.58) 0%,
-          rgba(0, 0, 0, 0.28) 45%,
-          rgba(0, 0, 0, 0.18) 100%
-        );
-
-      z-index: 1;
-      pointer-events: none;
-    }
-
-
-    /* =========================================================
-       GS LOGO
-       ========================================================= */
-
-    .landing-logo-link {
-      position: absolute;
-      top: 10px;
-      left: 5%;
-
-      z-index: 10;
-
-      display: block;
-      text-decoration: none;
-    }
-
-    .landing-logo {
-      display: block;
-
-      width: 125px;
-      height: 125px;
-
-      object-fit: contain;
-    }
-
-
-    /* =========================================================
-       MAIN LANDING CONTENT
-       ========================================================= */
-
-    .landing-content {
-      position: relative;
-      z-index: 5;
-
-      min-height: 100vh;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      padding: 180px 4% 80px;
-
-      box-sizing: border-box;
-    }
-
-
-    /* =========================================================
-       ARTIST NAME
-       ========================================================= */
-
-    .landing-name {
-      position: relative;
-      top: -40px;
-
-      margin: 0 0 5px 0;
-
-      font-family: 'Lora', Georgia, serif;
-      font-size: 16px;
-      font-weight: 400;
-
-      letter-spacing: 3px;
-      text-transform: uppercase;
-
-      color: #dcae3d;
-
-      text-shadow:
-        0 2px 4px rgba(0, 0, 0, 0.9);
-    }
-
-
-    /* =========================================================
-       MAIN TITLE
-       ========================================================= */
-
-    .landing-title {
-      margin: 0;
-
-      font-family: 'Great Vibes', cursive;
-      font-size: 72px;
-      font-weight: 400;
-      line-height: 0.95;
-
-      color: #ffffff;
-
-      text-shadow:
-        0 3px 5px rgba(0, 0, 0, 0.95),
-        0 0 14px rgba(0, 0, 0, 0.65);
-    }
-
-
-    /* =========================================================
-       SUBTITLE
-       ========================================================= */
-
-    .landing-subtitle {
-      margin-top: 12px;
-      margin-bottom: 20px;
-
-      font-family: 'Lora', Georgia, serif;
-      font-size: 23px;
-      font-weight: 400;
-      font-style: italic;
-
-      letter-spacing: 1px;
-
-      color: #f4eee2;
-
-      text-shadow:
-        0 2px 3px rgba(0, 0, 0, 1),
-        0 0 10px rgba(0, 0, 0, 0.85);
-    }
-
-
-    /* =========================================================
-       INTRODUCTION
-       ========================================================= */
-
-    .landing-intro {
-      max-width: 650px;
-
-      margin: 0 0 30px 0;
-
-      font-family: 'Lora', Georgia, serif;
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.55;
-
-      color: #ffffff;
-
-      text-shadow:
-        0 2px 3px rgba(0, 0, 0, 1),
-        0 0 10px rgba(0, 0, 0, 0.85);
-    }
-
-
-    /* =========================================================
-       BEGIN THE JOURNEY BUTTON
-       ========================================================= */
-
-    .landing-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-
-      width: 320px;
-      max-width: 100%;
-
-      padding: 15px 22px;
-
-      box-sizing: border-box;
-
-      border: 1px solid #e5b544;
-
-      background: rgba(0, 0, 0, 0.85);
-
-      color: #ffffff;
-
-      font-family: 'Lora', Georgia, serif;
-      font-size: 18px;
-      font-weight: 400;
-
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      text-decoration: none;
-
-      transition:
-        color 0.25s ease,
-        background 0.25s ease;
-    }
-
-    .landing-button:hover {
-      color: #ffffff;
-      background: rgba(0, 0, 0, 0.55);
-    }
-
-
-    /* =========================================================
-       HERO QUOTE
-       ========================================================= */
-
-    .landing-quote {
-      position: absolute;
-
-      right: 4%;
-      top: 68%;
-
-      transform: translateY(-50%);
-
-      width: 18%;
-
-      z-index: 5;
-
-      text-align: center;
-
-      font-family: 'Lora', Georgia, serif;
-      font-size: 29px;
-      font-weight: 400;
-      font-style: italic;
-
-      line-height: 1.35;
-
-      color: #ffffff;
-
-      text-shadow:
-        0 3px 5px rgba(0, 0, 0, 0.95),
-        0 0 12px rgba(0, 0, 0, 0.75);
-    }
-
-    .landing-quote::after {
-      content: "";
-
-      display: block;
-
-      width: 48px;
-      height: 2px;
-
-      margin: 18px auto 0;
-
-      background: #dcae3d;
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media (max-width: 1100px) {
-
-      .landing-content {
-        padding: 170px 4% 70px;
-      }
-
-      .landing-title {
-        font-size: 62px;
-      }
-
-      .landing-subtitle {
-        font-size: 21px;
-      }
-
-      .landing-intro {
-        max-width: 600px;
-        font-size: 18px;
-      }
-
-      .landing-quote {
-        width: 22%;
-        font-size: 24px;
-      }
-
-    }
-
-
-    @media (max-width: 768px) {
-
-      .landing-page {
-        background-position: center center;
-      }
-
-      .landing-logo-link {
-        left: 5%;
-        top: 10px;
-      }
-
-      .landing-logo {
-        width: 100px;
-        height: 100px;
-      }
-
-      .landing-content {
-        justify-content: flex-end;
-        padding: 150px 7% 60px;
-      }
-
-      .landing-name {
-        top: -20px;
-        font-size: 14px;
-      }
-
-      .landing-title {
-        font-size: 54px;
-      }
-
-      .landing-subtitle {
-        font-size: 19px;
-        line-height: 1.3;
-      }
-
-      .landing-intro {
-        max-width: 100%;
-        font-size: 17px;
-        line-height: 1.5;
-      }
-
-      .landing-button {
-        width: 300px;
-        font-size: 16px;
-      }
-
-      .landing-quote {
-        display: none;
-      }
-
-    }
-
-
-    @media (max-width: 480px) {
-
-      .landing-content {
-        padding: 135px 7% 45px;
-      }
-
-      .landing-logo {
-        width: 90px;
-        height: 90px;
-      }
-
-      .landing-title {
-        font-size: 46px;
-      }
-
-      .landing-subtitle {
-        font-size: 17px;
-      }
-
-      .landing-intro {
-        font-size: 16px;
-      }
-
-      .landing-button {
-        width: 100%;
-        font-size: 15px;
-        letter-spacing: 1.5px;
-      }
-
-    }
-
-  </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 
 <body>
 
-  <main class="landing-page">
+    <!-- ==============================
+         HERO SECTION
+    =============================== -->
 
-    <!-- GS LOGO -->
-    <a href="index.html" class="landing-logo-link" aria-label="Return to Home">
-      <img
-        src="images/gslogo.png"
-        alt="Gerian Soirée"
-        class="landing-logo"
-      >
-    </a>
+    <header class="reflection-hero">
 
+        <!-- GS LOGO -->
 
-    <!-- MAIN CONTENT -->
-    <section class="landing-content">
-
-      <div class="landing-name">
-        Gerian Soirée
-      </div>
-
-      <h1 class="landing-title">
-        Reflections
-      </h1>
-
-      <div class="landing-subtitle">
-        Music. Reflection. Creativity. Discovery.
-      </div>
-
-      <p class="landing-intro">
-        This is a journey through ten reflections, ten pieces of music,
-        and the thoughts, questions and experiences that shaped them.
-        Each reflection is an invitation to pause, listen and discover
-        something along the way.
-      </p>
-
-      <a href="reflection-1.html" class="landing-button">
-        <span>Begin the Journey</span>
-        <span>→</span>
-      </a>
-
-    </section>
+        <a href="index.html" class="gs-logo-link">
+            <img
+                src="images/gslogo.png"
+                alt="Gerian Soirée GS Logo"
+                class="gs-logo"
+            >
+        </a>
 
 
-    <!-- QUOTE -->
-    <div class="landing-quote">
-      Some journeys begin with a question.
-    </div>
+        <!-- GERIAN SOIRÉE -->
 
-  </main>
+        <div class="gerian-soiree-name">
+            GERIAN SOIRÉE
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="reflection-navigation">
+
+            <a href="reflection-2.html" class="nav-previous">
+                <span class="nav-arrow">←</span> PREVIOUS
+            </a>
+
+            <a href="about/">ABOUT</a>
+
+            <a href="music/">MUSIC</a>
+
+            <a href="collection/">FULL COLLECTION</a>
+
+            <a href="reflection-4.html" class="nav-next">
+                NEXT <span class="nav-arrow">→</span>
+            </a>
+
+        </nav>
+
+
+        <!-- HERO IMAGE -->
+
+        <img
+            src="images/Reflection3-Hero.jpg"
+            alt="Reflection 3 Hero Image"
+            class="reflection-hero-image"
+        >
+
+
+        <!-- HERO TEXT -->
+
+        <div class="reflection-hero-content">
+
+            <div class="reflection-number">
+                Reflection 3
+            </div>
+
+            <h1>
+                30 Years of<br>
+                Silence
+            </h1>
+
+            <p class="reflection-subheading">
+                Time will shape you into who you will become
+            </p>
+
+        </div>
+
+
+        <!-- HERO QUOTE -->
+
+        <div class="hero-quote">
+            Then one day,<br>
+            I found my way<br>
+            back.
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN CONTENT SECTION
+    =============================== -->
+
+    <main class="reflection-content">
+
+
+        <!-- THE REFLECTION -->
+
+        <section class="reflection-story">
+
+            <h2>
+                THE REFLECTION
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="reflection-body">
+
+                <p>
+                    For almost thirty years, the piano became a memory. Something I used to do.
+                    Life moved on. Career, family, responsibility, life. And somewhere in all of that,
+                    music quietly stepped aside. It was not a part of who I was at that time.
+                    I didn't stop loving it… I stopped living it.
+                </p>
+
+                <p>
+                    Then one day, I found my way back. What surprised me wasn't that I could still play.
+                    It was a feeling of return. Of expectation. As if the music had been waiting for me.
+                </p>
+
+                <p>
+                    Almost as if those thirty years hadn't taken anything away at all.
+                    I was being prepared to hear it internally. To learn how to listen to the music
+                    that came from within.
+                </p>
+
+                <p>
+                    Looking back now, I don't see thirty years as silence anymore.
+                    I see thirty years of life, quietly preparing me for what I was about to say.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             LISTEN SECTION
+        =============================== -->
+
+        <section class="reflection-listen">
+
+            <h2>
+                LISTEN
+            </h2>
+
+            <div class="section-line"></div>
+
+            <div class="music-panel">
+
+                <!-- MUSIC ARTWORK -->
+
+                <div class="music-artwork">
+
+                    <img
+                        src="images/Reflection3-Hero.jpg"
+                        alt="Blue composition artwork"
+                    >
+
+                </div>
+
+
+                <!-- MUSIC INFORMATION -->
+
+                <div class="music-information">
+
+                    <div class="music-reflection-number">
+                        Reflection 3
+                    </div>
+
+                    <h3>
+                        Blue
+                    </h3>
+
+                    <p class="music-description">
+                        An original composition by Gerian Soirée
+                    </p>
+
+
+                    <!-- AUDIO PLAYER -->
+
+                    <div class="music-player">
+
+                        <button
+                            type="button"
+                            class="play-button"
+                            aria-label="Play Blue"
+                        >
+                            ▶
+                        </button>
+
+                        <audio
+                            class="audio-player"
+                            controls
+                            preload="none"
+                        >
+                            <!-- Audio source will be added later -->
+                        </audio>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             BOTTOM REFLECTION / TAGLINE
+        =============================== -->
+
+        <section class="bottom-reflection">
+
+            <div class="bottom-line"></div>
+
+            <p>
+                Perhaps some parts of ourselves don't disappear.
+                They simply wait until we're ready to rediscover them.
+            </p>
+
+            <div class="bottom-line"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         JAVASCRIPT
+    =============================== -->
+
+    <script src="js/script.js"></script>
 
 </body>
+
 </html>
