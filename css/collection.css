@@ -1,1 +1,699 @@
+/* =========================================
+   GS REFLECTIONS
+   FULL COLLECTION STYLESHEET
+========================================= */
 
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #f4eee2;
+    color: #17130f;
+
+    font-family: 'Lora', Georgia, serif;
+}
+
+
+/* =========================================
+   FULL COLLECTION HERO
+========================================= */
+
+.collection-hero {
+    position: relative;
+
+    width: 100%;
+    height: 44vh;
+    min-height: 400px;
+    max-height: 520px;
+
+    overflow: hidden;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.collection-hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 52%;
+
+    z-index: 0;
+}
+
+
+/* ---------- HERO IMAGE OVERLAY ---------- */
+
+.collection-hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.48) 0%,
+            rgba(0, 0, 0, 0.20) 38%,
+            rgba(0, 0, 0, 0.03) 70%,
+            rgba(0, 0, 0, 0.10) 100%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.collection-logo-link {
+    position: absolute;
+
+    top: 12px;
+    left: 6%;
+
+    z-index: 10;
+
+    display: block;
+}
+
+.collection-logo {
+    display: block;
+
+    width: 125px;
+    height: 125px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   ARTIST NAME
+========================================= */
+
+.collection-artist-name {
+    position: absolute;
+
+    top: 142px;
+    left: 5%;
+
+    z-index: 10;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    color: #f1d486;
+
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.95),
+        0px 0px 20px rgba(0, 0, 0, 0.85);
+
+    -webkit-text-stroke: 0.3px #ffffff;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.collection-navigation {
+    position: absolute;
+
+    top: 25px;
+    right: 4%;
+
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+}
+
+.collection-navigation a {
+    position: relative;
+
+    padding: 0 24px;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #f0cf70;
+
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 8px rgba(0, 0, 0, 0.95),
+        0px 0px 18px rgba(0, 0, 0, 0.9);
+
+    transition: color 0.25s ease;
+}
+
+.collection-navigation a + a::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 1px;
+    height: 38px;
+
+    transform: translateY(-50%);
+
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.collection-navigation a:hover {
+    color: #ffffff;
+}
+
+.collection-navigation .active {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.collection-hero-content {
+    position: absolute;
+
+    left: 5%;
+    bottom: 11%;
+
+    z-index: 5;
+
+    width: 52%;
+    max-width: 760px;
+}
+
+
+/* ---------- EYEBROW ---------- */
+
+.collection-eyebrow {
+    margin-bottom: 5px;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #f0d28b;
+
+    text-shadow:
+        0px 2px 4px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ---------- MAIN TITLE ---------- */
+
+.collection-hero-content h1 {
+    margin: 0;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 58px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.05;
+
+    color: #ffffff;
+
+    text-shadow:
+        0px 3px 4px rgba(0, 0, 0, 0.95),
+        0px 0px 12px rgba(0, 0, 0, 0.85),
+        0px 0px 25px rgba(0, 0, 0, 0.75);
+}
+
+
+/* ---------- SUBHEADING ---------- */
+
+.collection-subheading {
+    margin: 8px 0 0;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: italic;
+
+    color: #ffffff;
+
+    text-shadow:
+        0px 2px 4px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ---------- DIVIDER ---------- */
+
+.collection-divider {
+    width: 52px;
+    height: 2px;
+
+    margin: 14px 0;
+
+    background: #dcae3d;
+
+    box-shadow:
+        0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ---------- INTRO ---------- */
+
+.collection-intro {
+    max-width: 610px;
+
+    margin: 0;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    color: #ffffff;
+
+    text-shadow:
+        0px 2px 4px rgba(0, 0, 0, 1),
+        0px 0px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================
+   COLLECTION CONTENT
+========================================= */
+
+.collection-content {
+    width: 100%;
+
+    padding: 25px 4% 30px;
+
+    background: #f4eee2;
+}
+
+
+/* =========================================
+   COLLECTION HEADING
+========================================= */
+
+.collection-heading {
+    text-align: center;
+
+    margin-bottom: 14px;
+}
+
+.collection-heading h2 {
+    margin: 0;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #9d661b;
+}
+
+.collection-heading-line {
+    width: 45px;
+    height: 2px;
+
+    margin: 8px auto 0;
+
+    background: #b88a4a;
+}
+
+
+/* =========================================
+   REFLECTION GRID
+========================================= */
+
+.reflection-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+
+/* =========================================
+   REFLECTION CARD
+========================================= */
+
+.reflection-card {
+    position: relative;
+
+    display: block;
+
+    aspect-ratio: 1.42 / 1;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    background: #17130f;
+
+    box-shadow:
+        0px 2px 5px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ---------- CARD IMAGE ---------- */
+
+.reflection-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+/* ---------- CARD DARK OVERLAY ---------- */
+
+.reflection-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.82) 0%,
+            rgba(0, 0, 0, 0.42) 48%,
+            rgba(0, 0, 0, 0.04) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* ---------- CARD TEXT ---------- */
+
+.reflection-card-overlay {
+    position: absolute;
+
+    left: 12px;
+    right: 12px;
+    bottom: 11px;
+
+    z-index: 2;
+}
+
+.reflection-card-number {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 18px;
+    font-weight: 400;
+
+    color: #f0cf70;
+
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+
+.reflection-card h3 {
+    margin: 0;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.15;
+
+    color: #ffffff;
+
+    text-shadow:
+        0px 2px 3px rgba(0, 0, 0, 1),
+        0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.reflection-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0px 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.reflection-card:hover img {
+    transform: scale(1.04);
+
+    filter: brightness(1.08);
+}
+
+
+/* =========================================
+   RETURN TO BEGINNING
+========================================= */
+
+.collection-return {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 18px;
+}
+
+.collection-return a {
+    display: inline-block;
+
+    padding: 9px 28px;
+
+    border: 1px solid #b88a4a;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #3b3024;
+
+    background: transparent;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.collection-return a:hover {
+    background: #b88a4a;
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .collection-navigation a {
+        padding: 0 16px;
+        font-size: 15px;
+    }
+
+    .collection-hero-content {
+        width: 58%;
+    }
+
+    .collection-hero-content h1 {
+        font-size: 48px;
+    }
+
+    .collection-subheading {
+        font-size: 21px;
+    }
+
+    .collection-intro {
+        font-size: 16px;
+    }
+
+    .reflection-card h3 {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    .collection-hero {
+        height: 55vh;
+        max-height: none;
+    }
+
+    .collection-navigation {
+        top: 20px;
+        right: 3%;
+    }
+
+    .collection-navigation a {
+        padding: 0 9px;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .collection-navigation a + a::before {
+        height: 28px;
+    }
+
+    .collection-hero-content {
+        left: 6%;
+        bottom: 9%;
+        width: 72%;
+    }
+
+    .collection-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .collection-subheading {
+        font-size: 20px;
+    }
+
+    .collection-intro {
+        font-size: 15px;
+    }
+
+    .reflection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .collection-logo-link {
+        left: 5px;
+        top: 5px;
+    }
+
+    .collection-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .collection-artist-name {
+        top: 96px;
+        left: 5%;
+
+        font-size: 12px;
+    }
+
+    .collection-navigation {
+        top: 16px;
+        right: 2%;
+    }
+
+    .collection-navigation a {
+        padding: 0 6px;
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .collection-navigation a + a::before {
+        display: none;
+    }
+
+    .collection-hero-content {
+        left: 6%;
+        bottom: 8%;
+        width: 88%;
+    }
+
+    .collection-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .collection-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .collection-subheading {
+        font-size: 17px;
+    }
+
+    .collection-intro {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .collection-content {
+        padding: 20px 4% 25px;
+    }
+
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reflection-card {
+        aspect-ratio: 1.5 / 1;
+    }
+
+    .collection-heading h2 {
+        font-size: 17px;
+    }
+}
