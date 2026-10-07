@@ -486,6 +486,19 @@ body {
         0px 2px 3px rgba(0, 0, 0, 1),
         0px 0px 8px rgba(0, 0, 0, 0.9);
 }
+.reflection-card-music {
+    margin-top: auto;
+
+    font-family: 'Lora', Georgia, serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #f0c970;
+
+    text-shadow:
+        0 2px 3px rgba(0, 0, 0, 1),
+        0 0 8px rgba(0, 0, 0, 0.9);
+}
 
 
 /* =========================================
