@@ -287,7 +287,7 @@ body.about-page {
 
     display: grid;
 
-    grid-template-columns: 72% 28%;
+    grid-template-columns: 75% 25%;
 
     /*
        CRITICAL:
