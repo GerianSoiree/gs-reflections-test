@@ -47,7 +47,7 @@ body.about-page {
     background: var(--about-dark);
     color: var(--about-ink);
     font-family: 'Lora', Georgia, serif;
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 
