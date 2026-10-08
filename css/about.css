@@ -9,9 +9,11 @@
    This stylesheet belongs ONLY to the About page.
    Do not modify css/style.css or css/collection.css.
 
-   Desktop behaviour:
-   The About page is a fixed cinematic frame.
-   ONLY the beige content panel scrolls.
+   PAGE BEHAVIOUR:
+   The About page uses NORMAL DOCUMENT SCROLLING.
+   There are NO internal scrolling panels.
+   The entire page scrolls together:
+   Hero → Content/Piano → Closing Image.
    ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
@@ -40,6 +42,8 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
 
 body.about-page {
@@ -47,20 +51,38 @@ body.about-page {
     background: var(--about-dark);
     color: var(--about-ink);
     font-family: 'Lora', Georgia, serif;
+
+    /*
+       IMPORTANT:
+       The browser owns the page scrollbar.
+       No child element creates a second scrollbar.
+    */
+    overflow-x: hidden;
     overflow-y: auto;
 }
 
 
 /* =========================================================
-   MAIN CINEMATIC FRAME
+   MAIN ABOUT PAGE FRAME
    ========================================================= */
 
 .about-page-frame {
     position: relative;
+
     width: 100%;
     min-height: 100vh;
-    overflow: visible;   
+    height: auto;
+
+    /*
+       Normal document flow.
+       No fixed height.
+       No grid rows controlling the entire page.
+    */
+    display: block;
+
+    overflow: visible;
 }
+
 
 /* =========================================================
    NAVIGATION
@@ -68,6 +90,7 @@ body.about-page {
 
 .about-nav {
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -99,6 +122,8 @@ body.about-page {
 
     text-transform: uppercase;
     white-space: nowrap;
+
+    text-decoration: none;
 }
 
 .about-nav-links {
@@ -153,7 +178,12 @@ body.about-page {
     position: relative;
 
     width: 100%;
-    height: 250%;
+
+    /*
+       Desktop target:
+       approximately 250px at the 1920px reference width.
+    */
+    height: 250px;
 
     overflow: hidden;
 
@@ -169,12 +199,6 @@ body.about-page {
     height: 100%;
 
     object-fit: cover;
-
-    /*
-       Crop controlled here.
-       Do NOT crop the original photograph.
-    */
-
     object-position: center center;
 }
 
@@ -230,7 +254,6 @@ body.about-page {
     font-weight: 400;
 
     letter-spacing: 0.40em;
-
     text-transform: uppercase;
 }
 
@@ -253,14 +276,23 @@ body.about-page {
     position: relative;
 
     width: 100%;
-    height: auto;
 
-    min-height: 0;
+    /*
+       CRITICAL:
+       The middle section grows naturally from its content.
+       It does NOT have height: 100%.
+    */
+    height: auto;
+    min-height: 594px;
 
     display: grid;
 
     grid-template-columns: 72% 28%;
 
+    /*
+       CRITICAL:
+       Nothing inside this section captures the page scroll.
+    */
     overflow: visible;
 
     background: var(--about-cream);
@@ -268,19 +300,27 @@ body.about-page {
 
 
 /* =========================================================
-   SCROLLING BEIGE CONTENT PANEL
+   BEIGE CONTENT PANEL
    ========================================================= */
 
 .about-content {
     position: relative;
 
-    height: 100%;
-    min-height: 0;
+    width: 100%;
+    height: auto;
+
+    /*
+       The content determines the height of the middle section.
+    */
+    min-height: 594px;
 
     z-index: 5;
 
-    overflow-y: visible;
-    overflow-x: hidden;
+    /*
+       CRITICAL:
+       This is NOT a scrolling container.
+    */
+    overflow: visible;
 
     padding: 42px 5.8% 70px;
 
@@ -290,45 +330,6 @@ body.about-page {
             rgba(247, 244, 237, 0.98),
             rgba(239, 235, 226, 0.98)
         );
-
-    /*
-       Keep scrolling inside this panel.
-    */
-
-    overscroll-behavior: contain;
-
-    /*
-       Firefox
-    */
-
-    scrollbar-width: thin;
-    scrollbar-color:
-        rgba(23, 35, 49, 0.35)
-        transparent;
-}
-
-
-/*
-   WebKit browsers
-   Chrome / Edge / Safari
-*/
-
-.about-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.about-content::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.about-content::-webkit-scrollbar-thumb {
-    background: rgba(23, 35, 49, 0.30);
-
-    border-radius: 10px;
-}
-
-.about-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(23, 35, 49, 0.50);
 }
 
 
@@ -404,8 +405,13 @@ body.about-page {
 .about-aside {
     position: relative;
 
-    height: 100%;
-    min-height: 0;
+    /*
+       The piano column stretches to the natural height
+       of the beige content column.
+    */
+    width: 100%;
+    height: auto;
+    min-height: 594px;
 
     overflow: hidden;
 
@@ -421,12 +427,6 @@ body.about-page {
     height: 100%;
 
     object-fit: cover;
-
-    /*
-       This will be adjusted after the actual image
-       is placed into GitHub.
-    */
-
     object-position: center center;
 }
 
@@ -459,16 +459,15 @@ body.about-page {
     z-index: 2;
 
     width: 100%;
+    min-height: 594px;
     height: 100%;
 
     padding: 32px 13% 38px;
 
     display: flex;
-
     flex-direction: column;
 
     justify-content: space-between;
-
     align-items: center;
 
     text-align: center;
@@ -521,19 +520,26 @@ body.about-page {
 }
 
 
-/*
-   If the signature is supplied as a transparent
-   image, this keeps it independent from the text.
-*/
+/* =========================================================
+   GS LOGO / SIGNATURE
+   ========================================================= */
 
 .about-signature {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 12px auto 0;
+}
+
+.about-signature img {
     display: block;
 
     width: min(145px, 70%);
-
     height: auto;
-
-    margin: 12px auto 0;
 }
 
 
@@ -545,7 +551,12 @@ body.about-page {
     position: relative;
 
     width: 100%;
-    height: 100%;
+
+    /*
+       Desktop target:
+       approximately 238px at 1920 × 1080.
+    */
+    height: 238px;
 
     overflow: hidden;
 
@@ -561,12 +572,6 @@ body.about-page {
     height: 100%;
 
     object-fit: cover;
-
-    /*
-       Crop controlled here.
-       We can move this once the real image
-       is placed into GitHub.
-    */
 
     object-position: center center;
 }
@@ -604,7 +609,6 @@ body.about-page {
     display: flex;
 
     align-items: flex-end;
-
     justify-content: center;
 
     padding: 0 5% 28px;
@@ -679,29 +683,33 @@ body.about-page {
 
 
 /* =========================================================
-   DESKTOP REFERENCE ADJUSTMENT
+   DESKTOP REFERENCE
    ========================================================= */
-
-/*
-   At the exact 1920 × 1080 reference size:
-
-   Hero:
-       approximately 248px
-
-   Middle:
-       approximately 594px
-
-   Bottom:
-       approximately 238px
-*/
 
 @media (min-width: 1600px) {
 
-    .about-page-frame {
-        grid-template-rows:
-            23vh
-            55vh
-            22vh;
+    .about-hero {
+        height: 250px;
+    }
+
+    .about-middle {
+        min-height: 594px;
+    }
+
+    .about-content {
+        min-height: 594px;
+    }
+
+    .about-aside {
+        min-height: 594px;
+    }
+
+    .about-aside-content {
+        min-height: 594px;
+    }
+
+    .about-closing {
+        height: 238px;
     }
 
     .about-section {
@@ -720,23 +728,19 @@ body.about-page {
 
 @media (max-width: 1100px) {
 
-    /*
-       Tablet becomes a conventional scrolling page.
-       The desktop fixed-frame behaviour is not forced
-       onto smaller screens.
-    */
-
     body.about-page {
+        overflow-x: hidden;
         overflow-y: auto;
     }
 
     .about-page-frame {
-        height: auto;
+        width: 100%;
         min-height: 100vh;
-
-        overflow: visible;
+        height: auto;
 
         display: block;
+
+        overflow: visible;
     }
 
     .about-hero {
@@ -746,14 +750,19 @@ body.about-page {
 
     .about-middle {
         height: auto;
+        min-height: 0;
 
         grid-template-columns:
             minmax(0, 68%)
             minmax(280px, 32%);
+
+        overflow: visible;
     }
 
     .about-content {
         height: auto;
+        min-height: 0;
+
         overflow: visible;
 
         padding-left: 5%;
@@ -761,6 +770,11 @@ body.about-page {
     }
 
     .about-aside {
+        height: auto;
+        min-height: 700px;
+    }
+
+    .about-aside-content {
         min-height: 700px;
     }
 
@@ -826,9 +840,21 @@ body.about-page {
 
     .about-middle {
         display: block;
+
+        height: auto;
+        min-height: 0;
+
+        overflow: visible;
     }
 
     .about-content {
+        width: 100%;
+
+        height: auto;
+        min-height: 0;
+
+        overflow: visible;
+
         padding: 45px 7% 55px;
     }
 
@@ -850,12 +876,18 @@ body.about-page {
     }
 
     .about-aside {
+        width: 100%;
+
+        height: 700px;
         min-height: 700px;
+
+        overflow: hidden;
     }
 
     .about-aside-content {
-        padding-left: 12%;
-        padding-right: 12%;
+        width: 100%;
+        height: 700px;
+        min-height: 700px;
     }
 
     .about-closing {
@@ -911,7 +943,16 @@ body.about-page {
     }
 
     .about-aside {
+        height: 650px;
         min-height: 650px;
+    }
+
+    .about-aside-content {
+        height: 650px;
+        min-height: 650px;
+
+        padding-left: 12%;
+        padding-right: 12%;
     }
 
     .about-footer-brand {
