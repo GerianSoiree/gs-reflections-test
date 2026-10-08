@@ -472,11 +472,6 @@ body {
         0px 0px 8px rgba(0, 0, 0, 0.9);
 }
 
-.reflection-card-heading {
-    display: flex;
-    align-items: flex-start;
-}
-
 .reflection-card h3 {
     margin: 0;
 
