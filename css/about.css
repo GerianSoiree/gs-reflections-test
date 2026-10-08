@@ -279,7 +279,7 @@ body.about-page {
 
     z-index: 5;
 
-    overflow-y: auto;
+    overflow-y: visible;
     overflow-x: hidden;
 
     padding: 42px 5.8% 70px;
