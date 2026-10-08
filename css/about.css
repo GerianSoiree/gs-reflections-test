@@ -556,7 +556,7 @@ body.about-page {
        Desktop target:
        approximately 238px at 1920 × 1080.
     */
-    height: 360px;
+    height: 400px;
 
     overflow: hidden;
 
@@ -573,7 +573,7 @@ body.about-page {
 
     object-fit: cover;
 
-    object-position: center center;
+    object-position: center 70%;
 }
 
 .about-closing::after {
