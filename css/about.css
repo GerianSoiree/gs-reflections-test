@@ -494,17 +494,9 @@ body.about-page {
 }
 
 .about-quote::before {
-    content: '';
-
-    display: block;
-
-    width: 1px;
-    height: 52px;
-
-    margin: 0 auto 22px;
-
-    background: var(--about-gold);
+    display: none;
 }
+
 
 .about-quote::after {
     content: '';
