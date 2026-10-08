@@ -646,9 +646,21 @@ body.about-page {
    BOTTOM GS BRANDING
    ========================================================= */
 
+.about-footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+
+.about-footer-logo img {
+    display: block;
+    width: 145px;
+    height: auto;
+}
+
 .about-footer-brand {
     position: absolute;
-
     right: 3.8%;
     bottom: 25px;
 
