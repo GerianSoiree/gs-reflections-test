@@ -123,7 +123,7 @@ body.about-page {
 
     padding: 0 24px;
 
-    color: var(--about-white);
+    color: #f0cf70;
 
     text-decoration: none;
 
@@ -164,20 +164,6 @@ body.about-page {
 
 .about-nav-links a.active {
     color: #ffffff;
-}
-
-.about-nav-links a.active::after {
-    content: '';
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: -9px;
-
-    height: 1px;
-
-    background: var(--about-gold);
 }
 
 
